@@ -3,9 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="static/styles/style.css">
+    <title>Movies</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: antiquewhite;
+            font-size: 16px;
+            background-color: black;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .wrapper {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(26, 14, 1, 1) 100%);
+            width: 100%;
+        }
+
+        .container {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 50px 0;
+        }
+
+        header .logo {
+            text-transform: uppercase;
+            font-size: 29px;
+            font-weight: 800;
+        }
+
+        header > nav {
+            float: right;
+            width: 50%;
+        }
+
+        header > nav > ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header > nav > ul > li {
+            display: block;
+        }
+
+        header > nav > ul > li > a {
+            color: antiquewhite;
+        }
+
+        header > nav > ul > li:not(.active):not(.btn) > a:hover {
+            border-bottom: 5px solid #dc7000;
+        }
+
+        header > nav > ul > li.btn > a {
+            background-color: #fa9021;
+            padding: 9px 17px;
+            border-radius: 5px;
+            transition: all 500ms ease;
+        }
+
+        header > nav > ul > li.btn > a:hover {
+            background: #fa6221;
+        }
+
+        header > nav > ul > li.active::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 5px;
+            background: #dc7000;
+            border-radius: 10px;
+            position: relative;
+            top: 10px;
+            left: -15px;
+        }
+
+        .container-movie {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .moviecards1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .block {
+            background: #1b1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            flex: 1 1 calc(25% - 20px);
+            max-width: calc(25% - 20px);
+            transition: transform 0.3s;
+        }
+
+        .block:hover {
+            transform: scale(1.05);
+        }
+
+        .block img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+        }
+
+        .block figcaption {
+            color: #fff;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        footer .container div {
+            width: 30%;
+        }
+
+        footer .container div h4 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        footer hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            text-align: left;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        footer .center {
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body class="body">
     <div class="wrapper">
@@ -13,115 +181,103 @@
             <span class="logo">BookMovies</span>
             <nav>
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="movie.html">Movies</a></li>
+                    <li class="active"><a href="movie.html">Movies</a></li>
                     <li><a href="books.html">Books</a></li>
                     <li class="btn"><a href="signin.html">Sign In</a></li>
                 </ul>
             </nav>
         </header> 
+        <div class="container-movie">
+            <h1>Movies</h1>
+        </div>
+        <div class="moviecards1">
+            <figure class="block"> 
+                <img src="https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_.jpg" alt="It Ends With Us">
+                <figcaption>It Ends With Us</figcaption>
+            </figure>
+
+            <figure class="block"> 
+                <img src="https://upload.wikimedia.org/wikipedia/ru/b/bf/%D0%9E%D0%BF%D0%BF%D0%B5%D0%BD%D0%B3%D0%B5%D0%B9%D0%BC%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg" alt="OppenHeimer">
+                <figcaption>OppenHeimer</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg" alt="Avengers">
+                <figcaption>Avengers</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg" alt="Parasites">
+                <figcaption>Parasites</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://markdecosemo.com/wp-content/uploads/2022/01/image.png?w=693" alt="Dune">
+                <figcaption>Dune</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbxL1Ja_i6SMoeOqFMOdZe-0KEE5kGFwA8Vg&s" alt="Ocean's 8">
+                <figcaption>Ocean's 8</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://upload.wikimedia.org/wikipedia/ru/f/ff/Descendants_of_the_Sun.jpg" alt="Descendants of the Sun">
+                <figcaption>Descendants of the Sun</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/bf93b465-1189-4155-9dd1-cb9fb5cb1bb5/600x900" alt="1+1">
+                <figcaption>1+1</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_disneyplusoriginals_elemental_poster_rebrand_a0788af2.jpeg" alt="Elemental">
+                <figcaption>Elemental</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNdbzljKdFzwghR3NIAPIE-I95Xcn4iuTNsQ&s" alt="Pixels">
+                <figcaption>Pixels</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzEzYjhkYTctMWNmZS00MTc5LWI4OWUtZjFkNzNkYTNkMTJlXkEyXkFqcGc@._V1_.jpg" alt="Demon Slayer">
+                <figcaption>Demon Slayer</figcaption>
+            </figure>
+
+            <figure class="block">
+                <img src="https://kinocensor.ru/cache/videos/78/fcb0e920ed44b9d3ae610ea8e6a568b4-367x550.jpg" alt="Game of Thrones">
+                <figcaption>Game of Thrones</figcaption>
+            </figure>
+        </div>
+        <footer>
+            <div class="container">
+                <div>
+                    <span class="logo">BookMovies</span>
+                    <p>Your guide to the world of literature and cinema.</p>
+                </div>
+                <div>
+                    <h4>About us</h4>
+                    <ul>
+                        <li>Portfolio</li>
+                        <li>Reviews</li>
+                        <li>Books</li>
+                        <li>Movies</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact us</h4>
+                    <p>Astana, Kazakhstan</p>
+                    <p>+77076103761</p>
+                </div>
+            </div>
+            <hr>
+            <p class="center">Made by Oshakbay Aigerim and Orynbay Aisana SE-2304</p>
+        </footer>
+        <footer>Orynbay Aisana</footer>
     </div>
-
-    <div class="container-movie">
-        <h1>Movies</h1>
-    </div>
-
-    <div class="movie-nav">
-        <div class="nav-left"><nav>
-            <ul>
-                <li><a href="#">Top Movies</a></li>
-                <li><a href="#">Series</a></li>
-                <li><a href="#">Genres</a></li>
-                <li><a href="#">Best in World</a></li>
-            </ul></nav>
-        </div>
-        <div class="nav-right">
-            <nav>
-                <ul><input type="text" placeholder="Search Movies..."></ul>
-            </nav>
-        </div>
-    </div>
-    <div class="moviecards1">
-        <div class="block"> 
-            <img src="https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_.jpg" alt="">
-            <span>It Ends With Us</span>
-
-        </div>
-
-        <div class="block"> 
-            <img src="https://upload.wikimedia.org/wikipedia/ru/b/bf/%D0%9E%D0%BF%D0%BF%D0%B5%D0%BD%D0%B3%D0%B5%D0%B9%D0%BC%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg" alt="">
-            <span>OppenHeimer</span>
-        </div>
-
-        <div class="block">
-            <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg" alt="">
-            <span>Avengers</span>
-        </div>
-
-        <div class="block">
-            <img src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg" alt="">
-            <span>Parasites</span>
-        </div>
-        <div class="block">
-            <img src="https://markdecosemo.com/wp-content/uploads/2022/01/image.png?w=693" alt="">
-            <span>Duna</span>
-        </div>
-        <div class="block">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbxL1Ja_i6SMoeOqFMOdZe-0KEE5kGFwA8Vg&s" alt="">
-            <span>Ocean's 8</span>
-        </div>
-        <div class="block">
-            <img src="https://upload.wikimedia.org/wikipedia/ru/f/ff/Descendants_of_the_Sun.jpg" alt="">
-            <span>Descendants_of_the_Sun</span>
-        </div>
-        <div class="block">
-            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/bf93b465-1189-4155-9dd1-cb9fb5cb1bb5/600x900" alt="">
-            <span>1+1</span>
-        </div>
-        <div class="block">
-            <img src="https://lumiere-a.akamaihd.net/v1/images/p_disneyplusoriginals_elemental_poster_rebrand_a0788af2.jpeg" alt="">
-            <span>Elemental</span>
-        </div>
-        <div class="block">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNdbzljKdFzwghR3NIAPIE-I95Xcn4iuTNsQ&s" alt="">
-            <span>Pixels</span>
-        </div>
-        <div class="block">
-            <img src="https://m.media-amazon.com/images/M/MV5BNzEzYjhkYTctMWNmZS00MTc5LWI4OWUtZjFkNzNkYTNkMTJlXkEyXkFqcGc@._V1_.jpg" alt="">
-            <span>Demon slayer</span>
-        </div>
-        <div class="block">
-            <img src="https://kinocensor.ru/cache/videos/78/fcb0e920ed44b9d3ae610ea8e6a568b4-367x550.jpg" alt="">
-            <span>Game of Thrones</span>
-        </div>
-    </div>
-</div>
-<footer>
-    <div class="container">
-        <div>
-            <span class="logo">MOVIEBOOKS</span>
-            <p>Your guide to the world of literature and cinema.</p>
-        </div>
-        <div>
-            <h4>About us</h4>
-            <ul>
-                <li>Portfolio</li>
-                <li>Reiews</li>
-                <li>Books</li>
-                <li>Movies</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Contact us</h4>
-            <p>Astana, Kazakhstan</p>
-            <p>+77076103761</p>
-        </div>
-    </div>
-    <hr>
-    <p class="center">Made by Oshakbay Aigerim and Orynbay Aisana SE-2304</p>
-</footer>
-<footer>Orynbay Aisana</footer>
-
 </body>
-</html>    
+</html>
