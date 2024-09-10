@@ -38,7 +38,48 @@
             width: 1400px;
             margin: 0 auto;
         }
-
+        .container-work{
+            padding: 70px 60px;
+            margin-top: 0px;
+        }
+        .container-work .blocks{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-work .blocks .block{
+            width: 25%;
+            border-radius: 10px;
+            padding: 50px 35px;
+            background: #1C140F;
+        }
+        .container-work .blocks .block h3{
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .container-work .blocks .block .badge{
+            border-radius: 7px;
+            padding: 10px 20px;
+        }
+        .container-work .blocks .block .badge.purple{
+            background-color: #560f67;
+        }
+        .container-work .blocks .block .badge.brown{
+            background: #31190D;
+        }
+        .container-work .blocks .block .badge.green{
+            background: #192a1d;
+        }
+        .container-work .h2{
+            margin:20px;
+            margin-bottom: 30px;
+        }    
+        .contact-us{
+            margin: 83px;
+            margin-bottom: 30px;
+        } 
+        .contact-us h2{
+            margin-bottom: 30px;
+        } 
         header {
             padding: 50px 0;
         }
@@ -180,7 +221,7 @@
         }
     </style>
 </head>
-<body></body>
+<body>
     <div class="wrapper">
         <header class="container">
             <span class="logo">BookMovies</span>
@@ -207,8 +248,46 @@
                 </div>
                 <img src="img/1483635795-elle-books-to-movies (1).jpg" alt="About Image">
             </section>
-        </main>
 
+            <section  class="container-work">
+                <h2 class="h2">Why choose us</h2>
+                <div class="blocks">
+                    <div class="block">
+                        <span class="badge purple">Honest reviews</span>
+                        <h3>Objectivity and independence</h3>
+                        <p>Our reviews are based on honest and independent opinions. We strive to evaluate each book and film without bias so that you can make an informed choice.</p>
+                    </div>
+                    <div class="block">
+                        <span class="badge brown">A large selection</span>
+                        <h3>Reviews for every taste</h3>
+                        <p>We offer reviews on a wide variety of genres and formats – from classics to new products. Regardless of your preferences, you will find something interesting here.</p>
+                    </div>
+                <div class="block">
+                    <span class="badge green">Community</span>
+                    <h3>We appreciate your feedback</h3>
+                    <p>Our website is not only a place to read reviews, but also a community. Leave your feedback, share your impressions and help others find new masterpieces.</p>
+                </div>
+            </section>
+            <section  class="contact-us">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required style="margin-bottom: 10px;"><br>
+    
+                    <label for="contact-reason">Reason for Contact:</label>
+                    <select id="contact-reason" name="contact-reason" style="margin-bottom: 10px;">
+                        <option value="feedback">Feedback</option>
+                        <option value="inquiry">Inquiry</option>
+                        <option value="support">Support</option>
+                    </select><br>
+    
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" style="margin-bottom: 10px;"></textarea><br>
+    
+                    <input type="submit" value="Submit" style="background-color: #fa9021; color: antiquewhite; border: none; padding: 10px 20px; border-radius: 5px;">
+                </form>
+            </section>
+        </main>
         <footer>
             <div class="container">
                 <div>
@@ -233,7 +312,7 @@
             <hr>
             <p class="center">Made by Oshakbay Aigerim and Orynbay Aisana SE-2304</p>
         </footer>
-        <footer>Orynbay Aisana</footer>
+        <footer>Orynbayeva Aisana</footer>
     </div>
 </body>
 </html>
