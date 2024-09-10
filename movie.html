@@ -94,11 +94,55 @@
             top: 10px;
             left: -15px;
         }
-
         .container-movie {
-            padding: 100px 0;
+            background-image: url('https://variety.com/wp-content/uploads/2023/03/Movie-Theater-Film-Cinema-Exhibition-Placeholder.jpg?w=1000&h=562&crop=1');
+            background-size: cover;
+            background-position: center;
             text-align: center;
+            padding: 150px 0;
+            color: rgb(0, 0, 0);
         }
+        .movie-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(37, 36, 36);
+            padding: 10px;
+            border: 0.5px solid #000;
+        }
+        
+        .nav-left ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-left ul li {
+            display: flex;
+            margin-right: 20px;
+            padding: 9px;
+            border-right: 0.5px solid black; 
+            color: rgb(0, 0, 0);
+        }
+        
+        .nav-left ul li:last-child {
+            border-right: none; 
+        }
+        
+        .nav-left ul li a {
+            text-decoration: none;
+            color: rgb(114, 111, 111);
+            font-weight: 600;
+        }
+        
+        .nav-right input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 0.5px solid #000;
+            background-color: #f0f0f0;
+            color: #333;
+        }        
 
         .moviecards1 {
             display: flex;
@@ -191,6 +235,21 @@
         </header> 
         <div class="container-movie">
             <h1>Movies</h1>
+        </div>
+        <div class="movie-nav">
+            <div class="nav-left"><nav>
+                <ul>
+                    <li><a href="#">Top Movies</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">Best in World</a></li>
+                </ul></nav>
+            </div>
+            <div class="nav-right">
+                <nav>
+                    <ul><input type="text" placeholder="Search Movies..."></ul>
+                </nav>
+            </div>
         </div>
         <div class="moviecards1">
             <figure class="block"> 
